@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container-fluid px-5">
+        <div class="row">
+            <div class="col-12 my-3" style="display: flex; justify-content: center; align-items: center">
+                <h1>Calculadora IMC</h1>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="mb-3">
+                    <label for="peso" class="form-label">Peso:</label>
+                    <input type="number" class="form-control" id="peso" aria-describedby="infoPeso"/>
+                    <div id="infoPeso" class="form-text">Valor en Kilogramos.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="estatura" class="form-label">Estatura:</label>
+                    <input type="number" class="form-control" id="estatura" aria-describedby="infoEstatura"/>
+                    <div id="infoEstatura" class="form-text">Valor en metros.</div>
+                </div>
+                <button class="btn btn-primary" onclick="calcular()" id="calcular" disabled>Calcular</button>
+                <p id="resultado" class="mt-2"></p>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Rango</th>
+                        <th>Diagnóstico</th>
+                    </tr>
+                    <tr id="r1">
+                        <td>
+                            <p>Menor a 18.5</p>
+                        </td>
+                        <td>Bajo peso</td>
+                    </tr>
+                    <tr id="r2">
+                        <td>
+                            <p>18.5 a 24.9</p>
+                        </td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr id="r3">
+                        <td>
+                            <p>25 a 29.9</p>
+                        </td>
+                        <td>Sobre peso</td>
+                    </tr>
+                    <tr id="r4">
+                        <td>
+                            <p>De 30 en adelante</p>
+                        </td>
+                        <td>Obesidad</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./functions/functions.js"></script>
+<script src="./functions/bootstrap.bundle.min.js"></script>
+
+</html>
