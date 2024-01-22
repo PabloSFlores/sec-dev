@@ -23,13 +23,13 @@ function validarBoton() {
 const calcular = () => {
     const peso = document.getElementById('peso').value;
     const estatura = document.getElementById('estatura').value;
-    if (Number.isNaN(peso) || Number.isNaN(estatura)) {
+    if (isNaN(peso) || isNaN(estatura)) {
         alert("Ingresa valores válidos.")
-    } else if (peso == 0 || estatura == 0 || peso < 0 || estatura < 0) {
+    } else if (peso <= 0 || estatura <= 0) {
         alert("Los valores deben ser mayores a 0")
     } else {
         resultado = (peso / Math.pow(estatura, 2)).toFixed(2);
-        if (resultado === Infinity) {
+        if (resultado == Infinity || isNaN(resultado)) {
             alert("Ha ocurrido un error")
         } else {
             mostrarResultado()
